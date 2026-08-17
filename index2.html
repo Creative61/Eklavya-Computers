@@ -1,0 +1,1963 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CLIENT EDIT: Replace the page title here -->
+    <title>Eklavya Computers| Computer Education in Chhatrapati Sambhajinagar</title>
+
+    <meta name="description" content="Professional computer education institute offering MS-CIT, Tally Prime, Advanced Excel, DTP and Programming courses in Chhatrapati Sambhajinagar.">
+
+    <style>
+        :root {
+            --primary: #1257c7;
+            --primary-dark: #0b3f96;
+            --primary-light: #eaf2ff;
+            --secondary: #0f2747;
+            --text: #26364a;
+            --muted: #65748b;
+            --white: #ffffff;
+            --light: #f6f9fd;
+            --border: #e3eaf3;
+            --success: #16845b;
+            --shadow: 0 12px 35px rgba(19, 52, 92, 0.09);
+            --shadow-hover: 0 18px 45px rgba(19, 52, 92, 0.15);
+            --radius: 16px;
+            --container: 1180px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+            color: var(--text);
+            background: var(--white);
+            line-height: 1.65;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        button {
+            font-family: inherit;
+        }
+
+        .container {
+            width: min(92%, var(--container));
+            margin: 0 auto;
+        }
+
+        /* =========================
+           HEADER
+        ========================== */
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(255,255,255,0.96);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(227,234,243,0.9);
+        }
+
+        .navbar {
+            min-height: 76px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 30px;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            min-width: 0;
+        }
+
+        .brand-icon {
+            width: 43px;
+            height: 43px;
+            border-radius: 12px;
+            display: grid;
+            place-items: center;
+            color: white;
+            background: linear-gradient(135deg, var(--primary), #2877ed);
+            font-size: 20px;
+            font-weight: 800;
+            box-shadow: 0 8px 20px rgba(18,87,199,0.22);
+            flex-shrink: 0;
+        }
+
+        .brand-text strong {
+            display: block;
+            font-size: 17px;
+            color: var(--secondary);
+            line-height: 1.2;
+        }
+
+        .brand-text span {
+            display: block;
+            font-size: 11px;
+            color: var(--muted);
+            margin-top: 3px;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 27px;
+        }
+
+        .nav-links a {
+            font-size: 14px;
+            font-weight: 600;
+            color: #42546c;
+            transition: color 0.25s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .nav-cta {
+            color: white !important;
+            background: var(--primary);
+            padding: 11px 18px;
+            border-radius: 9px;
+        }
+
+        .nav-cta:hover {
+            color: white !important;
+            background: var(--primary-dark);
+        }
+
+        .menu-toggle {
+            display: none;
+            border: 0;
+            background: var(--primary-light);
+            color: var(--primary);
+            width: 42px;
+            height: 42px;
+            border-radius: 10px;
+            font-size: 21px;
+            cursor: pointer;
+        }
+
+        /* =========================
+           HERO
+        ========================== */
+
+        .hero {
+            position: relative;
+            overflow: hidden;
+            background:
+                radial-gradient(circle at 90% 15%, rgba(55,126,235,0.14), transparent 30%),
+                radial-gradient(circle at 10% 80%, rgba(18,87,199,0.08), transparent 30%),
+                linear-gradient(135deg, #f7faff 0%, #eef5ff 100%);
+            padding: 92px 0 88px;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.12fr 0.88fr;
+            align-items: center;
+            gap: 70px;
+        }
+
+        .eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 7px 12px;
+            background: white;
+            border: 1px solid #dce8fb;
+            color: var(--primary);
+            border-radius: 999px;
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        .eyebrow::before {
+            content: "";
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background: #2f85ed;
+        }
+
+        .hero h1 {
+            max-width: 720px;
+            color: var(--secondary);
+            font-size: clamp(38px, 5vw, 62px);
+            line-height: 1.08;
+            letter-spacing: -1.8px;
+            margin-bottom: 22px;
+        }
+
+        .hero h1 span {
+            color: var(--primary);
+        }
+
+        .hero-description {
+            max-width: 650px;
+            font-size: 17px;
+            color: var(--muted);
+            margin-bottom: 30px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 13px 20px;
+            border-radius: 10px;
+            font-size: 14px;
+            font-weight: 700;
+            transition: all 0.25s ease;
+            border: 1px solid transparent;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+            box-shadow: 0 8px 20px rgba(18,87,199,0.2);
+        }
+
+        .btn-primary:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background: white;
+            color: var(--secondary);
+            border-color: var(--border);
+        }
+
+        .btn-secondary:hover {
+            border-color: #bdd2ef;
+            transform: translateY(-2px);
+        }
+
+        .hero-panel {
+            position: relative;
+            background: white;
+            padding: 30px;
+            border-radius: 22px;
+            box-shadow: var(--shadow);
+            border: 1px solid rgba(227,234,243,0.8);
+        }
+
+        .hero-panel-top {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding-bottom: 23px;
+            margin-bottom: 22px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .panel-icon {
+            width: 49px;
+            height: 49px;
+            border-radius: 14px;
+            background: var(--primary-light);
+            color: var(--primary);
+            display: grid;
+            place-items: center;
+            font-size: 21px;
+            font-weight: 800;
+        }
+
+        .hero-panel h3 {
+            color: var(--secondary);
+            font-size: 18px;
+        }
+
+        .hero-panel p {
+            color: var(--muted);
+            font-size: 13px;
+        }
+
+        .feature-list {
+            list-style: none;
+            display: grid;
+            gap: 16px;
+        }
+
+        .feature-list li {
+            display: flex;
+            gap: 12px;
+            align-items: flex-start;
+            font-size: 14px;
+            color: #53647a;
+        }
+
+        .check {
+            width: 23px;
+            height: 23px;
+            border-radius: 50%;
+            background: #e8f8f1;
+            color: var(--success);
+            display: grid;
+            place-items: center;
+            font-size: 12px;
+            font-weight: 900;
+            flex-shrink: 0;
+        }
+
+        /* =========================
+           GENERAL SECTIONS
+        ========================== */
+
+        section {
+            padding: 88px 0;
+        }
+
+        .section-heading {
+            max-width: 720px;
+            margin-bottom: 45px;
+        }
+
+        .section-heading.center {
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+        }
+
+        .section-label {
+            color: var(--primary);
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: 1.2px;
+            text-transform: uppercase;
+            margin-bottom: 9px;
+        }
+
+        .section-heading h2 {
+            color: var(--secondary);
+            font-size: clamp(30px, 4vw, 42px);
+            line-height: 1.15;
+            letter-spacing: -0.8px;
+            margin-bottom: 13px;
+        }
+
+        .section-heading p {
+            color: var(--muted);
+            font-size: 15px;
+        }
+
+        /* =========================
+           ABOUT
+        ========================== */
+
+        .about {
+            background: white;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 0.9fr 1.1fr;
+            gap: 65px;
+            align-items: center;
+        }
+
+        .about-card {
+            background: linear-gradient(145deg, var(--secondary), #174a84);
+            color: white;
+            border-radius: 22px;
+            padding: 34px;
+            box-shadow: var(--shadow);
+        }
+
+        .about-card .big-number {
+            font-size: 52px;
+            line-height: 1;
+            font-weight: 800;
+            margin-bottom: 8px;
+        }
+
+        .about-card p {
+            color: #d5e2f4;
+            font-size: 14px;
+        }
+
+        .about-stats {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 14px;
+            margin-top: 30px;
+        }
+
+        .stat {
+            padding: 18px;
+            background: rgba(255,255,255,0.09);
+            border: 1px solid rgba(255,255,255,0.12);
+            border-radius: 13px;
+        }
+
+        .stat strong {
+            display: block;
+            font-size: 19px;
+            margin-bottom: 3px;
+        }
+
+        .stat span {
+            color: #c6d6eb;
+            font-size: 12px;
+        }
+
+        .about-copy p {
+            color: var(--muted);
+            font-size: 15px;
+            margin-bottom: 17px;
+        }
+
+        .about-points {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 14px;
+            margin-top: 25px;
+        }
+
+        .about-point {
+            display: flex;
+            gap: 10px;
+            align-items: flex-start;
+            font-size: 13px;
+            font-weight: 600;
+            color: #40536c;
+        }
+
+        /* =========================
+           COURSES
+        ========================== */
+
+        .courses {
+            background: var(--light);
+        }
+
+        .course-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .course-card {
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 25px;
+            box-shadow: 0 5px 20px rgba(20,50,90,0.04);
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .course-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .course-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 13px;
+            background: var(--primary-light);
+            color: var(--primary);
+            display: grid;
+            place-items: center;
+            font-size: 17px;
+            font-weight: 800;
+            margin-bottom: 18px;
+        }
+
+        .course-card h3 {
+            color: var(--secondary);
+            font-size: 19px;
+            margin-bottom: 8px;
+        }
+
+        .course-card > p {
+            color: var(--muted);
+            font-size: 13px;
+            margin-bottom: 18px;
+        }
+
+        .topics-title {
+            font-size: 11px;
+            color: #8491a3;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            margin-bottom: 8px;
+        }
+
+        .topics {
+            list-style: none;
+            display: grid;
+            gap: 6px;
+            margin-bottom: 20px;
+        }
+
+        .topics li {
+            color: #53647a;
+            font-size: 12px;
+            padding-left: 15px;
+            position: relative;
+        }
+
+        .topics li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+            font-weight: 900;
+        }
+
+        .duration {
+            margin-top: auto;
+            padding-top: 15px;
+            border-top: 1px solid var(--border);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 12px;
+        }
+
+        .duration span:first-child {
+            color: #8996a8;
+        }
+
+        .duration strong {
+            color: var(--primary);
+        }
+
+        /* =========================
+           WHY CHOOSE US
+        ========================== */
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 18px;
+        }
+
+        .why-card {
+            padding: 25px;
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            background: white;
+            transition: all 0.25s ease;
+        }
+
+        .why-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow);
+        }
+
+        .why-number {
+            color: #c9d8ee;
+            font-size: 13px;
+            font-weight: 800;
+            margin-bottom: 15px;
+        }
+
+        .why-card h3 {
+            color: var(--secondary);
+            font-size: 16px;
+            margin-bottom: 8px;
+        }
+
+        .why-card p {
+            color: var(--muted);
+            font-size: 12px;
+        }
+
+        /* =========================
+           BRANCHES
+        ========================== */
+
+        .branches {
+            background: var(--light);
+        }
+
+        .branch-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .branch-card {
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 26px;
+            box-shadow: 0 5px 20px rgba(20,50,90,0.04);
+            transition: all 0.25s ease;
+        }
+
+        .branch-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .branch-header {
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+            margin-bottom: 20px;
+        }
+
+        .branch-icon {
+            width: 45px;
+            height: 45px;
+            background: var(--primary-light);
+            color: var(--primary);
+            border-radius: 12px;
+            display: grid;
+            place-items: center;
+            flex-shrink: 0;
+            font-weight: 800;
+        }
+
+        .branch-header h3 {
+            color: var(--secondary);
+            font-size: 18px;
+            margin-bottom: 3px;
+        }
+
+        .branch-header span {
+            font-size: 11px;
+            color: var(--primary);
+            font-weight: 700;
+        }
+
+        .branch-details {
+            display: grid;
+            gap: 11px;
+            margin-bottom: 22px;
+        }
+
+        .branch-detail {
+            display: grid;
+            grid-template-columns: 75px 1fr;
+            gap: 10px;
+            font-size: 12px;
+        }
+
+        .branch-detail strong {
+            color: #8491a3;
+            font-weight: 700;
+        }
+
+        .branch-detail span {
+            color: #53647a;
+        }
+
+        .location-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            padding: 10px 14px;
+            color: var(--primary);
+            background: var(--primary-light);
+            border-radius: 8px;
+            font-size: 12px;
+            font-weight: 800;
+            transition: background 0.2s ease;
+        }
+
+        .location-btn:hover {
+            background: #dceaff;
+        }
+
+        /* =========================
+           INFORMATION
+        ========================== */
+
+        .information {
+            background: white;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .info-card {
+            padding: 28px;
+            background: var(--light);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+        }
+
+        .info-card-icon {
+            width: 42px;
+            height: 42px;
+            border-radius: 11px;
+            background: white;
+            color: var(--primary);
+            display: grid;
+            place-items: center;
+            font-weight: 800;
+            margin-bottom: 17px;
+        }
+
+        .info-card h3 {
+            color: var(--secondary);
+            font-size: 17px;
+            margin-bottom: 9px;
+        }
+
+        .info-card p,
+        .info-card li {
+            color: var(--muted);
+            font-size: 13px;
+        }
+
+        .info-card ul {
+            padding-left: 17px;
+        }
+
+        .info-card li {
+            margin-bottom: 5px;
+        }
+
+        /* =========================
+           FAQ
+        ========================== */
+
+        .faq {
+            background: var(--light);
+        }
+
+        .faq-list {
+            max-width: 850px;
+            margin: 0 auto;
+            display: grid;
+            gap: 10px;
+        }
+
+        .faq-item {
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .faq-question {
+            width: 100%;
+            background: white;
+            border: 0;
+            padding: 19px 21px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+            cursor: pointer;
+            text-align: left;
+            color: var(--secondary);
+            font-size: 14px;
+            font-weight: 700;
+        }
+
+        .faq-question span:last-child {
+            color: var(--primary);
+            font-size: 20px;
+            transition: transform 0.2s ease;
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .faq-answer p {
+            padding: 0 21px 20px;
+            color: var(--muted);
+            font-size: 13px;
+        }
+
+        .faq-item.active .faq-question span:last-child {
+            transform: rotate(45deg);
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 200px;
+        }
+
+        /* =========================
+           CONTACT
+        ========================== */
+
+        .contact {
+            padding-top: 75px;
+            padding-bottom: 75px;
+        }
+
+        .contact-box {
+            background: linear-gradient(135deg, var(--secondary), #174f8e);
+            color: white;
+            border-radius: 22px;
+            padding: 42px;
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .contact-box .section-label {
+            color: #8db9f5;
+        }
+
+        .contact-box h2 {
+            font-size: 30px;
+            line-height: 1.2;
+            margin-bottom: 10px;
+        }
+
+        .contact-box > div:first-child p {
+            color: #cad9ec;
+            font-size: 14px;
+            max-width: 650px;
+        }
+
+        .contact-details {
+            display: grid;
+            gap: 8px;
+            margin-top: 20px;
+        }
+
+        .contact-details a,
+        .contact-details span {
+            color: #e3edfa;
+            font-size: 13px;
+        }
+
+        .contact-action {
+            background: white;
+            color: var(--primary);
+            white-space: nowrap;
+        }
+
+        .contact-action:hover {
+            background: #eef5ff;
+            transform: translateY(-2px);
+        }
+
+        /* =========================
+           FOOTER
+        ========================== */
+
+        footer {
+            background: #091d35;
+            color: white;
+            padding: 42px 0 25px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.3fr 0.7fr 0.9fr;
+            gap: 50px;
+            padding-bottom: 35px;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        footer .brand-text strong {
+            color: white;
+        }
+
+        footer .brand-text span {
+            color: #9aadc4;
+        }
+
+        .footer-about {
+            margin-top: 16px;
+            color: #9aadc4;
+            font-size: 12px;
+            max-width: 430px;
+        }
+
+        .footer-column h4 {
+            font-size: 13px;
+            margin-bottom: 14px;
+        }
+
+        .footer-column a,
+        .footer-column p {
+            display: block;
+            color: #9aadc4;
+            font-size: 12px;
+            margin-bottom: 7px;
+        }
+
+        .footer-column a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            padding-top: 22px;
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            color: #7389a3;
+            font-size: 11px;
+        }
+
+        /* =========================
+           RESPONSIVE
+        ========================== */
+
+        @media (max-width: 1000px) {
+            .nav-links {
+                gap: 16px;
+            }
+
+            .hero-grid {
+                gap: 40px;
+            }
+
+            .course-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .why-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 780px) {
+            section {
+                padding: 65px 0;
+            }
+
+            .navbar {
+                min-height: 68px;
+            }
+
+            .menu-toggle {
+                display: grid;
+                place-items: center;
+            }
+
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 68px;
+                left: 0;
+                right: 0;
+                padding: 18px 5%;
+                background: white;
+                border-bottom: 1px solid var(--border);
+                box-shadow: 0 12px 25px rgba(0,0,0,0.06);
+                flex-direction: column;
+                align-items: stretch;
+                gap: 4px;
+            }
+
+            .nav-links.open {
+                display: flex;
+            }
+
+            .nav-links a {
+                padding: 11px 5px;
+            }
+
+            .nav-cta {
+                text-align: center;
+                margin-top: 5px;
+            }
+
+            .hero {
+                padding: 65px 0;
+            }
+
+            .hero-grid,
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-grid {
+                gap: 40px;
+            }
+
+            .about-grid {
+                gap: 35px;
+            }
+
+            .branch-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-box {
+                grid-template-columns: 1fr;
+                padding: 32px;
+            }
+
+            .contact-action {
+                justify-self: start;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 560px) {
+            .brand-text span {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 38px;
+            }
+
+            .hero-description {
+                font-size: 15px;
+            }
+
+            .hero-panel {
+                padding: 23px;
+            }
+
+            .course-grid,
+            .why-grid,
+            .about-points {
+                grid-template-columns: 1fr;
+            }
+
+            .about-stats {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .branch-detail {
+                grid-template-columns: 65px 1fr;
+            }
+
+            .contact-box h2 {
+                font-size: 25px;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 28px;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- =========================
+         HEADER
+    ========================== -->
+
+    <header>
+        <div class="container navbar">
+
+            <!-- CLIENT EDIT: Replace institute name and tagline here -->
+            <a href="#home" class="brand">
+                <div class="brand-icon">EC</div>
+                <div class="brand-text">
+                    <strong>Eklavya Computers</strong>
+                    <span>Learn • Practice • Grow</span>
+                </div>
+            </a>
+
+            <button class="menu-toggle" id="menuToggle" aria-label="Open navigation">
+                ☰
+            </button>
+
+            <nav class="nav-links" id="navLinks">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#courses">Courses</a>
+                <a href="#why-us">Why Us</a>
+                <a href="#branches">Branches</a>
+                <a href="#faq">FAQ</a>
+
+                <!-- CLIENT EDIT: Replace Contact navigation text/link if required -->
+                <a href="#contact" class="nav-cta">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+
+    <main>
+
+        <!-- =========================
+             HERO
+        ========================== -->
+
+        <section class="hero" id="home">
+            <div class="container hero-grid">
+
+                <div>
+                    <div class="eyebrow">Eklavya Computers</div>
+
+                    <!-- CLIENT EDIT: Replace main hero heading here -->
+                    <h1>Build practical <span>computer skills</span> for your future.</h1>
+
+                    <!-- CLIENT EDIT: Replace hero description here -->
+                    <p class="hero-description">
+                        Learn essential computer, accounting, office productivity,
+                        design and programming skills through structured courses
+                        designed for students, beginners and working professionals.
+                    </p>
+
+                    <div class="hero-buttons">
+                        <a href="#courses" class="btn btn-primary">Explore Courses →</a>
+                        <a href="#branches" class="btn btn-secondary">View Branches</a>
+                    </div>
+                </div>
+
+                <div class="hero-panel">
+                    <div class="hero-panel-top">
+                        <div class="panel-icon">✓</div>
+                        <div>
+                            <!-- CLIENT EDIT: Replace this heading if required -->
+                            <h3>Learning That Stays Practical</h3>
+                            <p>Focused on useful computer skills</p>
+                        </div>
+                    </div>
+
+                    <ul class="feature-list">
+                        <li>
+                            <span class="check">✓</span>
+                            <span>Beginner-friendly learning environment for students and adults.</span>
+                        </li>
+                        <li>
+                            <span class="check">✓</span>
+                            <span>Practical training with examples and guided exercises.</span>
+                        </li>
+                        <li>
+                            <span class="check">✓</span>
+                            <span>Multiple courses covering office, accounting, design and programming.</span>
+                        </li>
+                        <li>
+                            <span class="check">✓</span>
+                            <span>Four convenient branches across Chhatrapati Sambhajinagar.</span>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- =========================
+             ABOUT
+        ========================== -->
+
+        <section class="about" id="about">
+            <div class="container about-grid">
+
+                <div class="about-card">
+                    <!-- CLIENT EDIT: Replace institute experience/number here -->
+                    <div class="big-number">4</div>
+                    <p>Convenient learning centres serving students and learners across Chhatrapati Sambhajinagar.</p>
+
+                    <div class="about-stats">
+                        <div class="stat">
+                            <strong>05+</strong>
+                            <span>Career-focused courses</span>
+                        </div>
+
+                        <div class="stat">
+                            <strong>04</strong>
+                            <span>Local branches</span>
+                        </div>
+
+                        <div class="stat">
+                            <strong>Practical</strong>
+                            <span>Learning approach</span>
+                        </div>
+
+                        <div class="stat">
+                            <strong>Student</strong>
+                            <span>Friendly environment</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-copy">
+                    <div class="section-heading">
+                        <div class="section-label">About the Institute</div>
+
+                        <!-- CLIENT EDIT: Replace About heading here -->
+                        <h2>Helping learners become confident with technology.</h2>
+
+                        <!-- CLIENT EDIT: Replace About description here -->
+                        <p>
+                            Eklavya Computers is a professional computer
+                            education centre focused on making digital skills simple,
+                            practical and accessible.
+                        </p>
+                    </div>
+
+                    <!-- CLIENT EDIT: Replace these paragraphs with final institute information -->
+                    <p>
+                        Our courses are designed to help students understand
+                        commonly used computer applications and develop skills that
+                        can support their education, career preparation and everyday work.
+                    </p>
+
+                    <p>
+                        From office productivity and accounting software to desktop
+                        publishing and programming fundamentals, learners can choose
+                        training according to their individual goals.
+                    </p>
+
+                    <div class="about-points">
+                        <div class="about-point">
+                            <span class="check">✓</span>
+                            <span>Structured course learning</span>
+                        </div>
+
+                        <div class="about-point">
+                            <span class="check">✓</span>
+                            <span>Practical exercises</span>
+                        </div>
+
+                        <div class="about-point">
+                            <span class="check">✓</span>
+                            <span>Supportive environment</span>
+                        </div>
+
+                        <div class="about-point">
+                            <span class="check">✓</span>
+                            <span>Courses for different skill levels</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- =========================
+             COURSES
+        ========================== -->
+
+        <section class="courses" id="courses">
+            <div class="container">
+
+                <div class="section-heading center">
+                    <div class="section-label">Our Courses</div>
+
+                    <!-- CLIENT EDIT: Replace Courses heading and description here -->
+                    <h2>Courses designed for practical computer skills.</h2>
+                    <p>
+                        Choose a course based on your education, career goals
+                        and current level of computer knowledge.
+                    </p>
+                </div>
+
+                <div class="course-grid">
+
+                    <!-- CLIENT EDIT: Replace Course 1 information here -->
+                    <article class="course-card">
+                        <div class="course-icon">MS</div>
+                        <h3>MS-CIT</h3>
+                        <p>
+                            Build essential digital literacy and learn commonly used
+                            computer applications for study and everyday work.
+                        </p>
+
+                        <div class="topics-title">Key Topics</div>
+                        <ul class="topics">
+                            <li>Computer fundamentals</li>
+                            <li>Windows and file management</li>
+                            <li>Word processing</li>
+                            <li>Internet and digital services</li>
+                        </ul>
+
+                        <!-- CLIENT EDIT: Replace Course 1 duration here -->
+                        <div class="duration">
+                            <span>Course Duration</span>
+                            <strong>3 Months</strong>
+                        </div>
+                    </article>
+
+
+                    <!-- CLIENT EDIT: Replace Course 2 information here -->
+                    <article class="course-card">
+                        <div class="course-icon">TP</div>
+                        <h3>Tally Prime</h3>
+                        <p>
+                            Learn practical accounting concepts and computerized
+                            accounting workflows using Tally Prime.
+                        </p>
+
+                        <div class="topics-title">Key Topics</div>
+                        <ul class="topics">
+                            <li>Accounting fundamentals</li>
+                            <li>Company creation</li>
+                            <li>Ledgers and vouchers</li>
+                            <li>GST basics and reports</li>
+                        </ul>
+
+                        <!-- CLIENT EDIT: Replace Course 2 duration here -->
+                        <div class="duration">
+                            <span>Course Duration</span>
+                            <strong>4 Months</strong>
+                        </div>
+                    </article>
+
+
+                    <!-- CLIENT EDIT: Replace Course 3 information here -->
+                    <article class="course-card">
+                        <div class="course-icon">EX</div>
+                        <h3>Advanced Excel</h3>
+                        <p>
+                            Develop stronger spreadsheet skills for office,
+                            business, reporting and data management tasks.
+                        </p>
+
+                        <div class="topics-title">Key Topics</div>
+                        <ul class="topics">
+                            <li>Advanced formulas</li>
+                            <li>Functions and lookups</li>
+                            <li>Charts and reporting</li>
+                            <li>Data analysis</li>
+                        </ul>
+
+                        <!-- CLIENT EDIT: Replace Course 3 duration here -->
+                        <div class="duration">
+                            <span>Course Duration</span>
+                            <strong>3 Months</strong>
+                        </div>
+                    </article>
+
+
+                    <!-- CLIENT EDIT: Replace Course 4 information here -->
+                    <article class="course-card">
+                        <div class="course-icon">DT</div>
+                        <h3>DTP</h3>
+                        <p>
+                            Learn the fundamentals of desktop publishing and create
+                            professional-looking print and digital designs.
+                        </p>
+
+                        <div class="topics-title">Key Topics</div>
+                        <ul class="topics">
+                            <li>Page layout fundamentals</li>
+                            <li>Typography</li>
+                            <li>Design composition</li>
+                            <li>Print-ready documents</li>
+                        </ul>
+
+                        <!-- CLIENT EDIT: Replace Course 4 duration here -->
+                        <div class="duration">
+                            <span>Course Duration</span>
+                            <strong>3 Months</strong>
+                        </div>
+                    </article>
+
+
+                    <!-- CLIENT EDIT: Replace Course 5 information here -->
+                    <article class="course-card">
+                        <div class="course-icon">&lt;/&gt;</div>
+                        <h3>Programming</h3>
+                        <p>
+                            Start learning programming concepts and logical problem
+                            solving through beginner-friendly practical exercises.
+                        </p>
+
+                        <div class="topics-title">Key Topics</div>
+                        <ul class="topics">
+                            <li>Programming fundamentals</li>
+                            <li>Variables and data types</li>
+                            <li>Conditions and loops</li>
+                            <li>Basic problem solving</li>
+                        </ul>
+
+                        <!-- CLIENT EDIT: Replace Course 5 duration here -->
+                        <div class="duration">
+                            <span>Course Duration</span>
+                            <strong>4 Months</strong>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- =========================
+             WHY CHOOSE US
+        ========================== -->
+
+        <section id="why-us">
+            <div class="container">
+
+                <div class="section-heading center">
+                    <div class="section-label">Why Choose Us</div>
+
+                    <!-- CLIENT EDIT: Replace Why Choose Us heading/description here -->
+                    <h2>A simple approach to better computer learning.</h2>
+                    <p>
+                        We focus on clarity, practice and useful skills that learners
+                        can apply beyond the classroom.
+                    </p>
+                </div>
+
+                <div class="why-grid">
+
+                    <!-- CLIENT EDIT: Replace Why Us point 1 here -->
+                    <div class="why-card">
+                        <div class="why-number">01</div>
+                        <h3>Practical Learning</h3>
+                        <p>
+                            Course concepts are supported with practical examples
+                            and exercises.
+                        </p>
+                    </div>
+
+                    <!-- CLIENT EDIT: Replace Why Us point 2 here -->
+                    <div class="why-card">
+                        <div class="why-number">02</div>
+                        <h3>Beginner Friendly</h3>
+                        <p>
+                            Courses are structured to help learners build confidence
+                            step by step.
+                        </p>
+                    </div>
+
+                    <!-- CLIENT EDIT: Replace Why Us point 3 here -->
+                    <div class="why-card">
+                        <div class="why-number">03</div>
+                        <h3>Useful Skills</h3>
+                        <p>
+                            Learn applications and concepts that can support academic
+                            and professional work.
+                        </p>
+                    </div>
+
+                    <!-- CLIENT EDIT: Replace Why Us point 4 here -->
+                    <div class="why-card">
+                        <div class="why-number">04</div>
+                        <h3>Four Local Branches</h3>
+                        <p>
+                            Students can choose a convenient branch in
+                            Chhatrapati Sambhajinagar.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- =========================
+             BRANCHES
+        ========================== -->
+
+        <section class="branches" id="branches">
+            <div class="container">
+
+                <div class="section-heading center">
+                    <div class="section-label">Our Branches</div>
+
+                    <!-- CLIENT EDIT: Replace Branch section heading/description here -->
+                    <h2>Find a convenient branch near you.</h2>
+                    <p>
+                        We currently have four learning centres across
+                        Chhatrapati Sambhajinagar.
+                    </p>
+                </div>
+
+                <div class="branch-grid">
+
+                    <!-- CLIENT EDIT: Replace Branch 1 name, address, phone, timings and location URL here -->
+                    <article class="branch-card">
+                        <div class="branch-header">
+                            <div class="branch-icon">01</div>
+                            <div>
+                                <h3>Chhatrapati ShivajiNagar Branch</h3>
+                                <span>Chhatrapati Sambhajinagar</span>
+                            </div>
+                        </div>
+
+                        <div class="branch-details">
+                            <div class="branch-detail">
+                                <strong>Address</strong>
+                                <span>Behind Golden Care Hospital Deshmukh nagar, Chhatrapati Shivajinagar, Chhatrapati Sambhajinagar, Maharashtra 431001</span>
+                            </div>
+
+                            <div class="branch-detail">
+                                <strong>Phone</strong>
+                                <span>+91 9890117281</span>
+                            </div>
+
+                            <div class="branch-detail">
+                                <strong>Timings</strong>
+                                <span>8:00 AM – 8:00 PM, Monday to Saturday</span>
+                            </div>
+                        </div>
+
+                        <!-- CLIENT EDIT: Replace dummy location URL here -->
+                        <a href="https://maps.app.goo.gl/AXaHhACtzmwtLEHz8" class="location-btn" target="_blank" rel="noopener">
+                            View Location →
+                        </a>
+                    </article>
+
+
+                    <!-- CLIENT EDIT: Replace Branch 2 name, address, phone, timings and location URL here -->
+                    <article class="branch-card">
+                        <div class="branch-header">
+                            <div class="branch-icon">02</div>
+                            <div>
+                                <h3>Chatrapati Nagar Branch</h3>
+                                <span>Chhatrapati Sambhajinagar</span>
+                            </div>
+                        </div>
+
+                        <div class="branch-details">
+                            <div class="branch-detail">
+                                <strong>Address</strong>
+                                <span>Opp. Shambhu Raje High School, Beed bypass, Deolai Parisar, Chhatrapati Sambhajinagar, Maharashtra 431005</span>
+                            </div>
+
+                            <div class="branch-detail">
+                                <strong>Phone</strong>
+                                <span>+91 8669196512</span>
+                            </div>
+
+                            <div class="branch-detail">
+                                <strong>Timings</strong>
+                                <span>9:00 AM – 8:00 PM, Monday to Saturday</span>
+                            </div>
+                        </div>
+
+                        <!-- CLIENT EDIT: Replace dummy location URL here -->
+                        <a href="https://maps.app.goo.gl/vhXhuQRVBVK5FZX8A" class="location-btn" target="_blank" rel="noopener">
+                            View Location →
+                        </a>
+                    </article>
+
+
+                    <!-- CLIENT EDIT: Replace Branch 3 name, address, phone, timings and location URL here -->
+                    <article class="branch-card">
+                        <div class="branch-header">
+                            <div class="branch-icon">03</div>
+                            <div>
+                                <h3> Naiknagar Branch</h3>
+                                <span>Chhatrapati Sambhajinagar</span>
+                            </div>
+                        </div>
+
+                        <div class="branch-details">
+                            <div class="branch-detail">
+                                <strong>Address</strong>
+                                <span>Plot no 59, Beed bypass road, Naiknagar,Satara Deolai Parisar, Chhatrapati Sambhajinagar, Maharashtra 431136</span>
+                            </div>
+
+                            <div class="branch-detail">
+                                <strong>Phone</strong>
+                                <span>+91 9158459431</span>
+                            </div>
+
+                            <div class="branch-detail">
+                                <strong>Timings</strong>
+                                <span>9:00 AM – 8:00 PM, Monday to Saturday</span>
+                            </div>
+                        </div>
+
+                        <!-- CLIENT EDIT: Replace dummy location URL here -->
+                        <a href="https://maps.app.goo.gl/GamQKtKymLQWKWPU6" class="location-btn" target="_blank" rel="noopener">
+                            View Location →
+                        </a>
+                    </article>
+
+
+                    <!-- CLIENT EDIT: Replace Branch 4 name, address, phone, timings and location URL here -->
+                    <article class="branch-card">
+                        <div class="branch-header">
+                            <div class="branch-icon">04</div>
+                            <div>
+                                <h3>Aloknagar Branch</h3>
+                                <span>Chhatrapati Sambhajinagar</span>
+                            </div>
+                        </div>
+
+                        <div class="branch-details">
+                            <div class="branch-detail">
+                                <strong>Address</strong>
+                                <span>Urja nagar-Aloknagar Road, Ayyipa mandir road, Near Moral Kids School,Satara Deolai Parisar, Chhatrapati Sambhajinagar, Maharashtra 431136</span>
+                            </div>
+
+                            <div class="branch-detail">
+                                <strong>Phone</strong>
+                                <span>+91 8625979647</span>
+                            </div>
+
+                            <div class="branch-detail">
+                                <strong>Timings</strong>
+                                <span>9:00 AM – 8:00 PM, Monday to Saturday</span>
+                            </div>
+                        </div>
+
+                        <!-- CLIENT EDIT: Replace dummy location URL here -->
+                        <a href="https://maps.app.goo.gl/3Qvnuf8f1ZDFofgL6" class="location-btn" target="_blank" rel="noopener">
+                            View Location →
+                        </a>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- =========================
+             STUDENT & PARENT INFORMATION
+        ========================== -->
+
+        <section class="information" id="information">
+            <div class="container">
+
+                <div class="section-heading center">
+                    <div class="section-label">Student & Parent Information</div>
+
+                    <!-- CLIENT EDIT: Replace Information heading/description here -->
+                    <h2>Everything you need to know before joining a course.</h2>
+                    <p>
+                        Helpful information for students and parents planning
+                        their computer education.
+                    </p>
+                </div>
+
+                <div class="info-grid">
+
+                    <!-- CLIENT EDIT: Replace information card 1 here -->
+                    <div class="info-card">
+                        <div class="info-card-icon">01</div>
+                        <h3>Who Can Join?</h3>
+                        <p>
+                            Students, beginners, job seekers, working professionals
+                            and anyone interested in improving their computer skills
+                            can explore our courses.
+                        </p>
+                    </div>
+
+                    <!-- CLIENT EDIT: Replace information card 2 here -->
+                    <div class="info-card">
+                        <div class="info-card-icon">02</div>
+                        <h3>Before You Start</h3>
+                        <ul>
+                            <li>Check the course syllabus.</li>
+                            <li>Confirm course duration.</li>
+                            <li>Choose your preferred branch.</li>
+                            <li>Confirm class timings.</li>
+                        </ul>
+                    </div>
+
+                    <!-- CLIENT EDIT: Replace information card 3 here -->
+                    <div class="info-card">
+                        <div class="info-card-icon">03</div>
+                        <h3>For Parents</h3>
+                        <p>
+                            Parents can review the course details, branch timings
+                            and available learning options before discussing the
+                            right course with their student.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- =========================
+             FAQ
+        ========================== -->
+
+        <section class="faq" id="faq">
+            <div class="container">
+
+                <div class="section-heading center">
+                    <div class="section-label">Frequently Asked Questions</div>
+
+                    <!-- CLIENT EDIT: Replace FAQ heading/description here -->
+                    <h2>Common questions from students and parents.</h2>
+                    <p>
+                        Here are some general answers about our courses and learning process.
+                    </p>
+                </div>
+
+                <div class="faq-list">
+
+                    <!-- CLIENT EDIT: Replace FAQ 1 question and answer here -->
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Which course is suitable for a beginner?</span>
+                            <span>+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>
+                                MS-CIT is a suitable starting point for learners who
+                                want to develop basic computer and digital skills.
+                                The appropriate course can also depend on the student's goals.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- CLIENT EDIT: Replace FAQ 2 question and answer here -->
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Can students choose different courses based on their goals?</span>
+                            <span>+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>
+                                Yes. Students can select courses according to their
+                                interests and goals, such as office productivity,
+                                accounting, design or programming.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- CLIENT EDIT: Replace FAQ 3 question and answer here -->
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Do all branches offer the same courses?</span>
+                            <span>+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>
+                                Course availability may vary by branch. Students should
+                                confirm the current course schedule with their preferred branch.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- CLIENT EDIT: Replace FAQ 4 question and answer here -->
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>How can I find the nearest branch?</span>
+                            <span>+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>
+                                Visit the Branches section above and use the View Location
+                                button for your preferred centre. The current links are
+                                dummy URLs and should be replaced with the actual location links.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- CLIENT EDIT: Replace FAQ 5 question and answer here -->
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Are the course durations fixed?</span>
+                            <span>+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>
+                                The durations shown on this website are dummy information
+                                for now. Please confirm the actual duration, batch schedule
+                                and syllabus with the institute.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- =========================
+             CONTACT
+        ========================== -->
+
+        <section class="contact" id="contact">
+            <div class="container">
+
+                <div class="contact-box">
+
+                    <div>
+                        <div class="section-label">Contact Information</div>
+
+                        <!-- CLIENT EDIT: Replace contact heading here -->
+                        <h2>Have questions about our courses?</h2>
+
+                        <!-- CLIENT EDIT: Replace contact description here -->
+                        <p>
+                            Students and parents can contact the institute using
+                            the information below for course availability, timings
+                            and branch-related information.
+                        </p>
+
+                        <div class="contact-details">
+
+                            <!-- CLIENT EDIT: Replace phone number here -->
+                            <a href="tel:+919890117281">☎ +91 9890117281</a>
+
+                            <!-- CLIENT EDIT: Replace email address here -->
+                            <a href="mailto:eklavyacomp@gmail">
+                                ✉ eklavyacomp@gmail.com
+                            </a>
+
+                            <!-- CLIENT EDIT: Replace office timing here -->
+                            <span>◷ Monday – Saturday | 9:00 AM – 7:00 PM</span>
+
+                            <!-- CLIENT EDIT: Replace city/address information here -->
+                            <span>⌖ Chhatrapati Sambhajinagar, Maharashtra</span>
+
+                        </div>
+                    </div>
+
+                    <!-- CLIENT EDIT: Replace telephone link here -->
+                    <a href="tel:+919000010000" class="btn contact-action">
+                        Call Institute
+                    </a>
+
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer>
+        <div class="container">
+
+            <div class="footer-grid">
+
+                <div>
+                    <!-- CLIENT EDIT: Replace footer institute name/tagline here -->
+                    <a href="#home" class="brand">
+                        <div class="brand-icon">T</div>
+                        <div class="brand-text">
+                            <strong>Eklavya Computers</strong>
+                            <span>Learn • Practice • Grow</span>
+                        </div>
+                    </a>
+
+                    <!-- CLIENT EDIT: Replace footer description here -->
+                    <p class="footer-about">
+                        A professional computer education institute focused on
+                        practical digital skills for students, parents and learners.
+                    </p>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <a href="#about">About</a>
+                    <a href="#courses">Courses</a>
+                    <a href="#why-us">Why Choose Us</a>
+                    <a href="#branches">Branches</a>
+                    <a href="#faq">FAQ</a>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Contact</h4>
+
+                    <!-- CLIENT EDIT: Replace footer contact details here -->
+                    <a href="tel:+919890117281">+91 9890117281</a>
+                    <a href="mailto:eklavyacomp@gmail">eklavyacomp@gmail.com</a>
+                    <p>Chhatrapati Sambhajinagar, Maharashtra</p>
+                </div>
+
+            </div>
+
+            <div class="footer-bottom">
+
+                <!-- CLIENT EDIT: Replace copyright name/year here -->
+                <span>© 2026 Eklavya Computers. All rights reserved.</span>
+
+                <span>Computer Education • Chhatrapati Sambhajinagar</span>
+
+            </div>
+
+        </div>
+    </footer>
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================== -->
+
+    <script>
+        // Mobile navigation
+        const menuToggle = document.getElementById("menuToggle");
+        const navLinks = document.getElementById("navLinks");
+
+        menuToggle.addEventListener("click", () => {
+            navLinks.classList.toggle("open");
+
+            if (navLinks.classList.contains("open")) {
+                menuToggle.textContent = "×";
+            } else {
+                menuToggle.textContent = "☰";
+            }
+        });
+
+        // Close mobile navigation after clicking a link
+        document.querySelectorAll(".nav-links a").forEach(link => {
+            link.addEventListener("click", () => {
+                navLinks.classList.remove("open");
+                menuToggle.textContent = "☰";
+            });
+        });
+
+        // FAQ accordion
+        document.querySelectorAll(".faq-question").forEach(button => {
+            button.addEventListener("click", () => {
+
+                const item = button.parentElement;
+                const isActive = item.classList.contains("active");
+
+                // Close all FAQ items
+                document.querySelectorAll(".faq-item").forEach(faq => {
+                    faq.classList.remove("active");
+                });
+
+                // Open selected item
+                if (!isActive) {
+                    item.classList.add("active");
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
